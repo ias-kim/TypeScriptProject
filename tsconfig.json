@@ -9,10 +9,10 @@
     // See also https://aka.ms/tsconfig/module
     "module": "CommonJS",
     "esModuleInterop": true,
-    "target": "esnext",
+    "target": "ES6",
     "types": [],
     // For nodejs:
-    // "lib": ["esnext"],
+    "lib": ["DOM", "ES2015"],
     // "types": ["node"],
     // and npm install -D @types/node
 
@@ -26,6 +26,8 @@
     "exactOptionalPropertyTypes": true,
 
     // Style Options
+    "noImplicitAny": false,
+    // "strict": false
     // "noImplicitReturns": true,
     // "noImplicitOverride": true,
     // "noUnusedLocals": true,
@@ -40,5 +42,7 @@
     "noUncheckedSideEffectImports": true,
     "moduleDetection": "force",
     "skipLibCheck": true,
-  }
+  },
+  "include": ["**/*.ts"],
+  "exclude": ["node_modules", "**/*.spec.ts"]
 }

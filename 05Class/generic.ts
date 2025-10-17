@@ -16,7 +16,7 @@ interface IValue1<T, G, V> {
     first: T;
     second: G;
     third: V;
-}
+};
 
 const value: IValue1<string, number, boolean> = {
     first: "hello world",
